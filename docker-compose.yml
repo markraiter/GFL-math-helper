@@ -1,0 +1,11 @@
+version: '3.1'
+
+services:
+  postgres:
+    image: postgres:latest
+    environment:
+      POSTGRES_DB: math-helper
+      POSTGRES_USER: root
+      POSTGRES_PASSWORD: example
+    ports:
+      - "5432:5432"

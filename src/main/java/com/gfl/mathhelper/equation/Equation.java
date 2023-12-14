@@ -1,5 +1,7 @@
 package com.gfl.mathhelper.equation;
 
+import org.apache.commons.math3.analysis.function.Identity;
+
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
@@ -33,5 +35,15 @@ public class Equation {
         Matcher matcher = pattern.matcher(equation);
 
         return !matcher.find();
+    }
+
+    public double solveEquation(double x) {
+        Identity identity = new Identity();
+
+        return identity.value(x);
+    }
+
+    public String getEquation() {
+        return equation;
     }
 }
